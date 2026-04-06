@@ -1,6 +1,6 @@
-def agregar_al_carrito(carrito, plato, cantidad):
+def agregar_al_carrito(carrito, productos, cantidad):
     carrito.append({
-        "plato": plato,
+        "productos": productos,
         "cantidad": cantidad
     })
 
@@ -8,7 +8,7 @@ def agregar_al_carrito(carrito, plato, cantidad):
 def calcular_total(carrito):
     total = 0
     for item in carrito:
-        total += item["plato"]["precio"] * item["cantidad"]
+        total += item["productos"]["precio"] * item["cantidad"]
     return total
 
 

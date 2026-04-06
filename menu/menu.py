@@ -3,11 +3,11 @@ import questionary
 
 def mostrar_menu_principal():
     return questionary.select(
-        "Selecciona una opción:",
+        "Bienvenido/a a tu Ecommerce",
         choices=[
-            "Ver menú",
-            "Buscar plato",
-            "Agregar al carrito",
+            "Ver catalogo de productos",
+            "Buscar producto",
+            "Agregar producto al carrito",
             "Ver carrito",
             "Vaciar carrito",
             "Salir"
@@ -24,10 +24,10 @@ def pedir_numero(mensaje):
     return int(valor)
 
 
-def mostrar_platos(platos):
-    if not platos:
+def mostrar_productos(productos):
+    if not productos:
         print("No hay resultados")
         return
 
-    for p in platos:
+    for p in productos:
         print(f"{p['id']} - {p['nombre']} (${p['precio']}) [{p['categoria']}]")
